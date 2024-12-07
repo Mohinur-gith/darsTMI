@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 
 namespace gitbash
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            int a=24, b=36;
+            int a = 24, b = 36, c = 72, d = 100;
+            int ab = ekub(a, b);
+            int cd = ekub(c, d);
+            int natija = ekub(ab, cd);
+            Console.WriteLine("Ekub(a,b) = " + ab + "\nEkub(c,d) = " +cd 
+                +"\nEkub = " + natija);
+            Console.ReadKey();
+        }
+        public static int ekub(int a, int b)
+        {
             while (a != b)
             {
                 if (a > b)
@@ -22,8 +31,7 @@ namespace gitbash
                     b = b - a;
                 }
             }
-            Console.WriteLine("Ekub = " + a);
-            Console.ReadKey();
+            return a;
         }
     }
 }
